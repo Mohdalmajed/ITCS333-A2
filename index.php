@@ -37,15 +37,14 @@ if ($data === NULL) {
 <body>
     <div class="container">
         <br />
-        <h1>University of Bahrain Students Enrollment by Nationality</h1>
-        <br />
-
+        <h1>University of Bahrain Students Enrollment Data</h1>
         <!-- Table to display the data while ensuring its responsiveness -->
         <div class="overflow-auto">
             <table class="striped">
-                <thead data-theme="dark">
-                    <tr>
-                        <th>Year</th>
+                <thead> <!-- The header of the table -->
+                    <tr> 
+                        <th>Year</style>
+                        </th>
                         <th>Semester</th>
                         <th>The Programs</th>
                         <th>Nationality</th>
@@ -53,11 +52,11 @@ if ($data === NULL) {
                         <th>Number of Students</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody> <!-- The body (data rows) of the table -->
                     <?php
                     // Loop through the data and display each record
                     foreach ($data['results'] as $record) {
-                        // Safely extract each field using htmlspecialchars
+                        // Safely extract each element using htmlspecialchars
                         $year = htmlspecialchars($record['year']);
                         $semester = htmlspecialchars($record['semester']);
                         $program = htmlspecialchars($record['the_programs']);
@@ -66,7 +65,7 @@ if ($data === NULL) {
                         $num_students = htmlspecialchars($record['number_of_students']);
 
                         // Display data in table row
-                        echo "<tr>";
+                        echo "<tr style='font-size: 0.825rem'>";
                         echo "<td>{$year}</td>";
                         echo "<td>{$semester}</td>";
                         echo "<td>{$program}</td>";
